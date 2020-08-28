@@ -1,10 +1,13 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:${server.port}/eureka/
+    #是否把自己作为服务注册到其它服务注册中心
     register-with-eureka: false
+    #是否从其它服务注册中心同步服务列表
+    fetch-registry: false
 spring:
   application:
     name: eureka-server
 server:
-  port: 8761
+  port: 8080
