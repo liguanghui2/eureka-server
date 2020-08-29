@@ -1,3 +1,5 @@
+server:
+  port: 8080
 eureka:
   client:
     service-url:
@@ -9,5 +11,7 @@ eureka:
 spring:
   application:
     name: eureka-server
-server:
-  port: 8080
+  security:
+    user:
+      name: root
+      password: root
